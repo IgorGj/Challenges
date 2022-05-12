@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.bg-darkgray {
+  background-color: #414a4f;
+}
+
+.bg-blue {
+  background-color: #37a0f3;
+}
+.bg-lightgray {
+  background-color: #f7f7f7;
+}
+.c-darkgray {
+  color: #414a4f;
+}
+
+.c-white {
+  color: white;
+}
+
+/* first-section styles */
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 30px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../images/hero.jpg") center center/cover no-repeat fixed;
+}
+
+.logo a {
+  font-size: 16px;
+}
+
+.header {
+  align-items: center;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+.menu li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.logo a,
+.menu a {
+  font-size: 1.25rem;
+}
+
+.button-section {
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.button-section h1 {
+  color: white;
+  font-size: 3rem;
+}
+.button-section h2 {
+  color: white;
+}
+.button-section :not(:last-child) {
+  margin-bottom: 30px;
+}
+.btn {
+  text-transform: uppercase;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  background-color: #37a0f3;
+  width: 20%;
+}
+
+/* first-section styles end */
+
+/* second-section styles */
+
+.second-section {
+  padding: 60px 0;
+}
+
+.text-section {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text-section :not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.text-section h3 {
+  font-size: 20px;
+}
+
+.text-section p {
+  font-size: 18px;
+}
+
+.hr-classic {
+  width: 50%;
+  border: none;
+  border-radius: 2em;
+
+  padding: 6px 0;
+  margin: 0 auto;
+}
+
+.second-section-wrapper {
+  padding: 60px 0 0;
+}
+
+.second-section-inner {
+  flex-wrap: wrap;
+  margin-right: -30px;
+}
+
+.second-section-inner :nth-child(n + 3) {
+  margin-top: 30px;
+}
+
+.second-section-fourty {
+  position: relative;
+  width: 40%;
+  height: 25vh;
+}
+.second-section-sixty {
+  width: 60%;
+  position: relative;
+  height: 25vh;
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-right: 30px;
+}
+.image-one {
+  background: url("./images/coast.jpg") center center/cover no-repeat;
+}
+.image-two {
+  background: url("./images/island.jpg") center center/cover no-repeat;
+}
+
+.image-three {
+  background: url("./images/balloon.jpg") center center/cover no-repeat;
+}
+.image-four {
+  background: url("./images/mountain.jpg") center center/cover no-repeat;
+}
+
+/* second-section styles end */
+
+/* third-section style */
+
+.container {
+  width: 100%;
+}
+
+.third-section-inner {
+  padding: 0 0 60px;
+  margin: 0 auto;
+}
+.third-section-thirty {
+  width: 33.3333%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.third-section-thirty h3,
+.third-section-thirty p {
+  color: #414a4f;
+}
+.third-section-thirty:not(:last-child) {
+  margin-right: 30px;
+}
+
+.third-section-thirty :not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.third-section-thirty .fa-solid {
+  font-size: 2rem;
+  color: #37a0f3;
+}
+
+.subscribe form {
+  display: flex;
+  flex-direction: row;
+}
+
+form input.email {
+  width: 70%;
+  margin: 0 30px 0 0 !important;
+}
+form .btn {
+  width: 30%;
+}
+
+/* third-section style end */
+
+/* footer-section style */
+
+.footer {
+  flex-direction: column;
+  background-color: #414a4f;
+  padding: 60px 0;
+  width: 100%;
+}
+
+.footer-inner,
+.footer-links {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-links ul {
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+
+.footer-links ul li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.footer-inner {
+  padding: 30px 0 0;
+}
+
+.span-color {
+  color: #889aa9;
+}
+.footer-inner span {
+  text-transform: uppercase;
+}
+
+/* footer-section style end */
+
+/* Responsive design */
+
+/* tablet styles */
+
+@media (max-width: 768px) {
+  .logo a {
+    font-size: 30px;
+  }
+  .btn {
+    width: 50%;
+  }
+  .text-section {
+    width: 100%;
+  }
+
+  .second-section-inner,
+  .third-section-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .second-section-fourty,
+  .second-section-sixty {
+    width: 100%;
+    height: 40vh;
+    margin: 0 !important;
+  }
+  .second-section-inner :not(:last-child) {
+    margin-bottom: 30px !important;
+  }
+  .third-section-thirty {
+    width: 50%;
+    margin-right: 0 !important;
+  }
+  .third-section-thirty:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  form input.email {
+    width: 70%;
+    margin: 0 0 30px !important;
+    padding: 15px 0;
+  }
+  form button.btn {
+    width: 50%;
+  }
+  .subscribe form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-links,
+  .footer-inner {
+    width: 60%;
+  }
+}
+
+/* tablet styles end */
+
+/* mobile l styles */
+
+@media (max-width: 425px) {
+  .header {
+    flex-direction: column;
+  }
+  .button-section {
+    width: 90%;
+  }
+
+  .button-section h1 {
+    font-size: 4rem;
+  }
+  .footer-inner {
+    width: 90%;
+  }
+  .third-section-thirty .fa-solid {
+    font-size: 4rem;
+  }
+  .text-section h3 {
+    font-size: 40px;
+  }
+}
+
+/* mobile l styles end */
