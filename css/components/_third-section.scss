@@ -1,0 +1,79 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+.container {
+  background-color: var.$background-color-secondary;
+  width: 100%;
+
+  .third-section-inner {
+    @extend %d-flex;
+    padding: 0 0 var.$gutter-base * 2;
+    text-align: center;
+
+    @include mix.tablet-styles {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & :not(:last-child) {
+      margin-right: var.$gutter-base;
+      @include mix.tablet-styles {
+        margin: 0 0 var.$gutter-base;
+      }
+    }
+    .third-section-thirty {
+      width: 33.3333%;
+      @include mix.tablet-styles {
+        width: 50%;
+      }
+
+      :not(:last-child) {
+        margin: 0 0 var.$gutter-base;
+      }
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+    .fa-solid {
+      color: var.$background-color-primary;
+      font-size: var.$icon-size-base;
+      @include mix.tablet-styles {
+        font-size: var.$icon-size-base * 2;
+        margin-bottom: var.$gutter-base;
+      }
+    }
+    h3,
+    p {
+      color: var.$text-color-secondary;
+    }
+  }
+  .subscribe form {
+    width: 100%;
+    @extend %d-flex;
+    @include mix.tablet-styles {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .email {
+      width: 70%;
+      margin: 0 var.$gutter-base 0 0 !important;
+
+      @include mix.tablet-styles {
+        margin: 0 0 var.$gutter-base !important;
+        width: 80%;
+        padding: math.div(var.$gutter-base, 2) 0;
+      }
+    }
+    button {
+      width: 30%;
+      @include mix.tablet-styles {
+        width: 50%;
+      }
+      @include mix.mobile-l-styles {
+        padding: math.div(var.$gutter-base, 2) var.$gutter-base;
+      }
+    }
+  }
+}

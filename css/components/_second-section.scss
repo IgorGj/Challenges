@@ -1,0 +1,63 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.second-section {
+  padding: var.$gutter-base * 2 0;
+
+  .second-section-wrapper {
+    padding: var.$gutter-base * 2 0 0;
+    .second-section-inner {
+      @extend %d-flex;
+      flex-wrap: wrap;
+      margin-right: -30px;
+
+      & :nth-child(n + 3) {
+        margin-top: var.$gutter-base;
+        @include mix.tablet-styles {
+          margin-top: 0;
+        }
+      }
+      & :not(:last-child) {
+        @include mix.tablet-styles {
+          margin-bottom: var.$gutter-base;
+        }
+      }
+      @include mix.tablet-styles {
+        flex-direction: column;
+        margin: 0;
+      }
+    }
+  }
+}
+.second-section-fourty {
+  position: relative;
+  width: 40%;
+  height: 25vh;
+
+  .image-one {
+    @include mix.backgroung-img("../images/coast.jpg");
+  }
+  .image-four {
+    @include mix.backgroung-img("../images/mountain.jpg");
+  }
+  @include mix.tablet-styles {
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+.second-section-sixty {
+  width: 60%;
+  position: relative;
+  height: 25vh;
+  .image-two {
+    @include mix.backgroung-img("../images/island.jpg");
+  }
+  .image-three {
+    @include mix.backgroung-img("../images/balloon.jpg");
+  }
+  @include mix.tablet-styles {
+    width: 100%;
+    height: 40vh;
+  }
+}

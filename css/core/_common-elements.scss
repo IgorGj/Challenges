@@ -1,0 +1,83 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+body {
+  font-family: var.$font-family-base;
+  font-weight: var.$font-weight-normal;
+  line-height: var.$line-height-base;
+  color: var.$text-color-base;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: math.div(var.$gutter-base, 2);
+  font-weight: var.$font-weight-bold;
+}
+
+.btn {
+  background-color: var.$background-color-primary;
+  text-transform: uppercase;
+  border: none;
+  padding: math.div(var.$gutter-base, 2);
+  border-radius: var.$border-radius-base;
+  font-size: var.$font-size-base;
+  font-weight: var.$font-weight-bold;
+  text-align: center;
+  color: var.$text-color-primary;
+  cursor: pointer;
+  @include mix.tablet-styles {
+    padding: math.div(var.$gutter-base, 2) 0;
+  }
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.text-section {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  :not(:last-child) {
+    margin-bottom: var.$gutter-base;
+  }
+  h3,
+  p {
+    color: var.$text-color-secondary;
+    line-height: 35px;
+  }
+  h3 {
+    font-size: var.$font-size-bigger;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+  hr {
+    width: 50%;
+    border: none;
+    border-radius: 2em;
+    background-color: var.$background-color-primary;
+    padding: math.div(var.$gutter-base, 5) 0;
+    margin: 0 auto;
+  }
+  @include mix.tablet-styles {
+    width: 100%;
+  }
+}
+
+.background {
+  position: relative;
+  height: 100vh;
+  padding-top: var.$gutter-base;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../images/hero.jpg") center center/cover no-repeat fixed;
+}
+
+img {
+  height: 25vh;
+  width: 100%;
+}
