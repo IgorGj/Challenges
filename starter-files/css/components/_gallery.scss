@@ -1,0 +1,60 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.gallery {
+  @extend %d-flex;
+  flex-wrap: wrap;
+  width: 75%;
+  margin-left: 25%;
+  @include mix.tablet-styles {
+    margin-left: 0;
+    width: 100%;
+    //padding-top: var.$gutter-fixed-menu; ako e fiksno menito
+  }
+}
+
+.inner-gallery-item {
+  width: 33.3333%;
+  position: relative;
+  .image {
+    &:hover img {
+      opacity: 0;
+    }
+    &:hover .image-overlay {
+      opacity: 1;
+    }
+
+    img {
+      transition: opacity 0.3s ease-in-out;
+      min-height: 50vh; //ne znam dali treba da bidat 50vh taka mi izgleda na screenshot.
+    }
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      color: var.$text-color-secondary;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: var.$gutter-base;
+      font-size: var.$font-size-bigger;
+    }
+  }
+  @include mix.tablet-styles {
+    width: 50%;
+  }
+
+  @include mix.mobile-l-styles {
+    width: 100%;
+  }
+}
+
