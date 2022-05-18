@@ -1,0 +1,139 @@
+body {
+  background-color: #638caa;
+  margin: 0;
+}
+div {
+  text-align: center;
+}
+
+p {
+  display: inline-block;
+  margin: 18px;
+  color: white;
+  text-align: justify;
+  text-indent: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  display: block;
+  font-size: 30px;
+  margin-top: 13px;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 30%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+strong {
+  display: inline-block;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.float-right a {
+  display: inline-block;
+  color: #fdfdfe;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.float-right a:hover {
+  text-decoration: underline;
+  color: red;
+  transition: color 0.3s ease-in-out;
+}
+
+.fa-apple {
+  font-size: 3em;
+  text-decoration: none;
+  color: black;
+}
+
+.left-div {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.apple-product {
+  display: block;
+  margin-top: 15px;
+  font-size: 4em;
+}
+
+.c-light-brown {
+  background-color: #dbdbdb;
+}
+
+.c-dark-brown {
+  background-color: #bcb9aa;
+}
+.c-cyan {
+  background-color: #9ce0d1;
+}
+
+.c-gray {
+  background-color: #9aa7b8;
+}
+
+.c-light-gray {
+  background-color: #b7ced6;
+}
+
+.c-tomato {
+  background-color: #f09e84;
+}
+
+.third-left-div {
+  float: left;
+  width: 33.3333%;
+}
+
+.float-right {
+  float: right;
+  margin-right: 80px;
+  margin-top: 20px;
+}
+
+#contact i {
+  font-size: 2rem;
+  color: white;
+  margin: 30px 70px;
+}
+
+#contact i:hover,
+#apple i:hover {
+  color: red;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-color {
+  background-color: #514354;
+  padding: 10px 0;
+}
+
+
+.wrapper::after {
+  content: "";
+  clear: both;
+  width: 100%;
+  display: block;
+}
+
+.third-left-div p {
+  margin-bottom: 30px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: small;
+  color: white;
+}
