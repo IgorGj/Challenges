@@ -1,0 +1,23 @@
+
+.bg-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../images/home.jpg") center center/cover no-repeat;
+}
+
+.bg-purplish {
+  background-color: #4900d5;
+}
+
+.bg-custom-gray {
+  background-color: #393939;
+}
+
+.btn-transparent {
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-transparent:hover {
+  background-color: white;
+  color: black;
+}
