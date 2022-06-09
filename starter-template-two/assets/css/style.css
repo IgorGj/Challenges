@@ -1,0 +1,64 @@
+.nav-item.active {
+  border-left: 1px solid white;
+}
+.bg-img1 {
+  height: 75vh;
+  background: url("../../Images/image1.jpg") top center/cover no-repeat;
+}
+
+.bg-img2 {
+  height: 75vh;
+  background: url("../../Images/image2.jpg") top center/cover no-repeat;
+}
+
+.bg-img3 {
+  height: 75vh;
+  background: url("../../Images/image3.jpg") top center/cover no-repeat;
+}
+.bg-img4 {
+  background: url("../../Images/lights.jpg") top center/cover fixed no-repeat;
+}
+
+.bg-img5 {
+  background: linear-gradient(rgba(58, 58, 58, 0.726), rgba(58, 58, 58, 0.726)),
+    url("../../Images/media.jpg") top center/cover fixed no-repeat;
+}
+.bg-img6 {
+  height: 75vh;
+  background: url("../../Images/image1.jpg") top center/cover fixed no-repeat;
+}
+
+.carousel-caption {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+iframe {
+  width: 600px;
+  height: 400px;
+}
+.img-margin-top {
+  margin-top: -30px;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.card img {
+  height: 200px;
+}
+
+.carousel .carousel-indicators li {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.carousel-indicators li.active {
+  background-color: white;
+}
+.modal.fade.show[style] {
+  padding-right: 0 !important;
+}

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- boostrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+    <!-- local CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body> <!--Ne mozam da otkrijam od kade doaga paddingot i se pojavuva scrollbar na glavna oska -->
+    <nav
+      class="navbar navbar-expand-md navbar-dark bg-dark text-uppercase p-0 px-md-5 py-2 "
+    >
+      <a class="navbar-brand pl-3" href="#">glozzom</a>
+      <button
+        class="navbar-toggler border-0 pr-3  "
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto p-0">
+          <li class="nav-item active">
+            <a class="nav-link pl-3" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pl-3" href="about-us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pl-3" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pl-3" href="blog.html">blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pl-3" href="contact.html">contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide carousel-fade"
+      data-interval="false"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="bg-img1"></div>
+          <div class="carousel-caption d-none d-md-block w-75 text-right">
+            <h1 class="text-capitalize">Heading One</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia,
+              impedit non. Maiores ratione voluptatibus harum, perspiciatis
+              sequi hic molestias.
+            </p>
+            <a href="#newsletter" class="btn btn-lg btn-danger text-capitalize">
+              Sign Up Now
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="bg-img2"></div>
+          <div class="carousel-caption d-none d-md-block w-75">
+            <h1 class="text-capitalize">Heading Two</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia,
+              impedit non. Maiores ratione voluptatibus harum, perspiciatis
+              sequi hic molestias.
+            </p>
+            <a href="#" class="btn btn-lg btn-info text-capitalize">
+              learn more
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="bg-img3"></div>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="container py-5">
+      <div class="row flex-column flex-md-row align-items-center">
+        <div class="col-10 col-md-4 text-center text-dark mb-3 mb-md-0 ">
+          <i class="fa-solid fa-gear fa-2x mb-3"></i>
+          <h3 class="mb-3">Turning Gears</h3>
+          <p class="mb-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            perspiciatis aperiam quas?
+          </p>
+        </div>
+        <div class="col-10 col-md-4 text-center text-dark">
+          <i class="fa-solid fa-cloud fa-2x mb-3"></i>
+          <h3 class="mb-3">Turning Gears</h3>
+          <p class="mb-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            perspiciatis aperiam quas?
+          </p>
+        </div>
+        <div class="col-10 col-md-4 text-center text-dark">
+          <i class="fa-solid fa-cart-shopping fa-2x mb-3"></i>
+          <h3 class="mb-3">Turning Gears</h3>
+          <p class="mb-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            perspiciatis aperiam quas?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row bg-img4 py-5 justify-content-center">
+      <div class="container text-center text-white">
+        <h2 class="mb-3">Are you ready to get starter</h2>
+        <p class="mb-0">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          unde repellat odio, illum quod temporibus voluptas voluptate quibusdam
+          numquam?
+        </p>
+      </div>
+    </div>
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 align-self-center ">
+          <h3>Lorem ipsum</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos modi
+            voluptatibus corporis ea reiciendis dolores sit rem, delectus
+            exercitationem cumque quis soluta! Tenetur pariatur recusandae harum
+            fugit? Natus est, nesciunt dicta architecto odio ipsam repellat
+            reprehenderit accusamus rem neque nam!
+          </p>
+          <a href="#" class="btn btn-outline-danger">Learn more</a>
+        </div>
+        <div class="col-12 col-md-6">
+          <img src="./Images/laptop.png" class="mw-100" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="row bg-img5 py-5 justify-content-center align-items-center">
+      <div class="text-center text-white">
+        <i
+          type="button"
+          class="fa-solid fa-play fa-2x mb-3"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        ></i>
+
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl h-50" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <iframe
+                  class="w-100"
+                  src="https://www.youtube.com/embed/pWOv9xcoMeY"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="mb-0">See what we do</h3>
+      </div>
+    </div>
+    <div class="container py-5 text-center">
+      <h2 class="mb-3">Photo gallery</h2>
+        <p class="mb-3">Check out our photos.</p>
+      
+        <div class="row justify-content-center">
+        <div class="col-10 col-md-4 mb-3">
+          <img src="./Images/1.png" type="button" class="w-100" data-toggle="modal" data-target="#img1">
+          </img>
+          <div class="modal fade" id="img1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="./Images/1.png" class="w-100" alt="" />
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-4 mb-3">
+          <img src="./Images/2.png" type="button" class="w-100" data-toggle="modal" data-target="#img2">
+          </img>
+          <div class="modal fade" id="img2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="./Images/2.png" class="w-100" alt="" />
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-4 mb-3">
+          <img src="./Images/3.png" type="button" class="w-100" data-toggle="modal" data-target="#img3">
+          </img>
+          <div class="modal fade" id="img3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="./Images/3.png" class="w-100" alt="" />
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-4  mb-3 mb-md-0 ">
+          <img src="./Images/4.png" type="button" class="w-100" data-toggle="modal" data-target="#img4">
+          </img>
+          <div class="modal fade" id="img4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="./Images/4.png" class="w-100" alt="" />
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-4  mb-3 mb-md-0 ">
+          <img src="./Images/5.png" type="button" class="w-100" data-toggle="modal" data-target="#img5">
+          </img>
+          <div class="modal fade" id="img5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="./Images/5.png" class="w-100" alt="" />
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-4 ">
+          <img src="./Images/6.png" type="button" class="w-100" data-toggle="modal" data-target="#img6">
+          </img>
+          <div class="modal fade" id="img6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="./Images/6.png" class="w-100" alt="" />
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid py-5 bg-dark">
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <h2 class="text-white">Sign up for our newsletter</h2>
+          <p class="text-white">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
+            eligendi, impedit dicta neque suscipit distinctio expedita provident
+            ad cupiditate aliquid non officia iure cum voluptatibus.
+          </p>
+          <form action="/" class="form-row flex-column justify-content-center flex-md-row">
+            <div class="form-group mr-md-3">
+            <input type="text" class="form-control   " placeholder="Enter Name">
+            </div>
+            <div class="form-group mr-md-3">
+            <input type="email" class="form-control  " placeholder="Enter E-mail">
+            </div>
+            <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container-fluid pt-3 pb-4 bg-black">
+        <!--  mi izgleda kako dolu da ima poveke padding, inaku bi go napravil so py-3 -->
+        <div class="row">
+          <div class="col-12 text-white text-center">
+            Copyright 2018 &copy; Glozzom
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ON THE BOTTOM INSIDE THE BODY TAG -->
+    <!-- JQUERY CDN -->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- POPPER CDN -->
+    <script src="./assets/js/popper.min.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/f486e94259.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
