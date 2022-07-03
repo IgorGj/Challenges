@@ -19,6 +19,12 @@ for (let i = 10; i <= 100; i++) {
 // end of second exercise
 
 // third exercise
+// let numberOne = +prompt("enter a number");
+// let numberTwo = +prompt("enter a number");
+// let numberThree = +prompt("enter a number");
+// let arr = [numberOne, numberTwo, numberThree];
+// AKO TREBA DA ODI PREKU PROMPT BIDEJKI NE E KAZANO VO ZADACATA GO KOMENTIRAV
+
 let arr = [15, 13, 20];
 function findSmallestNumber(arr) {
   let howLarge = arr[0];
