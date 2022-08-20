@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- boostrap CSS -->
+
+    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+
+    <!-- GOOGLE ICONS -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- local CSS -->
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <ul class="mt-5" id="first-ul"></ul>
+    <ul id="second-ul"></ul>
+    <table class="table text-center mt-5" id="the-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>On Page</th>
+          <th>Max Pages</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <h2 style="text-align: center; margin-top: 5rem">Add a book to the list</h2>
+    <form>
+      <div class="form-row justify-content-center">
+        <div class="col">
+          <input
+            class="form-control"
+            placeholder="Book Title"
+            id="book-title"
+          />
+        </div>
+        <div class="col">
+          <input
+            class="form-control"
+            placeholder="Book Author"
+            id="book-author"
+          />
+        </div>
+        <div class="col">
+          <input
+            class="form-control"
+            placeholder="Current Page On:"
+            type="number"
+            id="book-curr-page"
+          />
+        </div>
+        <div class="col">
+          <input
+            class="form-control"
+            placeholder="Book Max Pages"
+            type="number"
+            id="book-max-pages"
+          />
+        </div>
+        <button class="btn btn-success" type="submit">Add to List</button>
+      </div>
+    </form>
+    <!-- ON THE BOTTOM INSIDE THE BODY TAG -->
+    <!-- JQUERY CDN -->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- POPPER CDN -->
+    <script src="../assets/js/popper.min.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
