@@ -1,4 +1,4 @@
-// THIS FILE IS PURE JS THE OTHERONE IS WITH HTML CODE
+// THIS FILE IS PURE JS AND IT HAS SOME EXTRAS
 
 const books = [
   {
@@ -87,6 +87,14 @@ tableHeadRow.append(
 );
 table.append(tableHead);
 
+const formInputTitle = document.createElement("input");
+const formInputAuthor = document.createElement("input");
+const formInputOnPage = document.createElement("input");
+const formInputMaxPages = document.createElement("input");
+const formSubmitBtn = document.createElement("button");
+
+let isClicked = false;
+let indexForEditingLists;
 const populatingTable = (theObj, index) => {
   const elementTableRow = document.createElement("tr");
   const theDataTitle = document.createElement("td");
@@ -97,9 +105,12 @@ const populatingTable = (theObj, index) => {
   const theDataProgressDiv = document.createElement("span");
   const theDataProgressDivInner = document.createElement("span");
   const elementTableRowDeleteIcon = document.createElement("span");
+  const editBtn = document.createElement("button");
 
+  editBtn.classList.add("btn", "btn-success");
+  editBtn.textContent = "Edit";
   elementTableRowDeleteIcon.classList.add("material-symbols-outlined");
-  elementTableRowDeleteIcon.setAttribute("style", "color:red; display:none;");
+  elementTableRowDeleteIcon.setAttribute("style", "color:red;");
   theDataProgressDiv.classList.add("progress");
 
   elementTableRow.addEventListener("click", (e) => {
@@ -107,25 +118,36 @@ const populatingTable = (theObj, index) => {
     const theSecondlist = secondUl.querySelectorAll("li");
     let theIndex = e.currentTarget.rowIndex - 1;
 
-    books.splice(index, 1);
-    theUl.removeChild(theFirstList[theIndex]);
-    secondUl.removeChild(theSecondlist[theIndex]);
+    if (e.target.tagName === "BUTTON") {
+      indexForEditingLists = theIndex;
+     
+      isClicked = true;
+      const theTableData = elementTableRow.querySelectorAll("td");
+      formInputTitle.value = theTableData[0].textContent;
+      formInputAuthor.value = theTableData[1].textContent;
+      formInputMaxPages.value = theTableData[2].textContent;
+      formInputOnPage.value = theTableData[3].textContent;
 
-    tableBody.removeChild(elementTableRow);
+    } else if (e.target.classList.contains("material-symbols-outlined")) {
+      books.splice(index, 1);
+      theUl.removeChild(theFirstList[theIndex]);
+      secondUl.removeChild(theSecondlist[theIndex]);
+      tableBody.removeChild(elementTableRow);
+    }
     if (!tableBody.hasChildNodes()) {
       table.style.display = "none";
     }
   });
 
-  elementTableRow.addEventListener("mouseenter", (e) => {
-    elementTableRowDeleteIcon.style.display = "block";
-    elementTableRow.style.textDecoration = "line-through";
-  });
+  // elementTableRowDeleteIcon.style.display = "block";
+  // elementTableRow.addEventListener("mouseenter", (e) => {
+  //   elementTableRow.style.textDecoration = "line-through";
+  // });
 
-  elementTableRow.addEventListener("mouseleave", (e) => {
-    elementTableRowDeleteIcon.style.display = "none";
-    elementTableRow.style.textDecoration = "none";
-  });
+  // elementTableRow.addEventListener("mouseleave", (e) => {
+  //   elementTableRowDeleteIcon.style.display = "none";
+  //   elementTableRow.style.textDecoration = "none";
+  // });
 
   theDataProgressDivInner.classList.add("progress-bar");
   let theProgressPercent = (theObj.onPage / theObj.maxPages) * 100;
@@ -145,10 +167,12 @@ const populatingTable = (theObj, index) => {
     theDataMaxPages,
     theDataOnPage,
     theDataProgress,
-    elementTableRowDeleteIcon
+    elementTableRowDeleteIcon,
+    editBtn
   );
   tableBody.append(elementTableRow);
 };
+
 table.append(tableBody);
 tableHead.append(tableHeadRow);
 
@@ -177,11 +201,11 @@ colAuthor.classList.add("col");
 colOnPage.classList.add("col");
 colMaxPages.classList.add("col");
 
-const formInputTitle = document.createElement("input");
-const formInputAuthor = document.createElement("input");
-const formInputOnPage = document.createElement("input");
-const formInputMaxPages = document.createElement("input");
-const formSubmitBtn = document.createElement("button");
+// const formInputTitle = document.createElement("input");
+// const formInputAuthor = document.createElement("input");
+// const formInputOnPage = document.createElement("input");
+// const formInputMaxPages = document.createElement("input");
+// const formSubmitBtn = document.createElement("button");
 
 formInputTitle.classList.add("form-control");
 formInputTitle.setAttribute("placeholder", "Book Title");
@@ -212,34 +236,70 @@ document.body.append(form);
 
 formSubmitBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  if (isClicked) {
+    const tBody = document.querySelector("tbody");
+    const theTr = tBody.querySelectorAll("tr");
+    const theTrNeeded = theTr[indexForEditingLists];
+    const theTd = theTrNeeded.querySelectorAll("td");
+    theTd[0].textContent = formInputTitle.value;
+    theTd[1].textContent = formInputAuthor.value;
+    theTd[2].textContent = formInputMaxPages.value;
+    theTd[3].textContent = formInputOnPage.value;
+    let theProgressPercent =
+      (formInputOnPage.value / formInputMaxPages.value) * 100;
+    theTd[4].innerHTML = `<span class="progress" style="width: 100%;"><span class="progress-bar" style="width: ${theProgressPercent}%; background-color: green;">${Math.floor(
+      theProgressPercent
+    )}%</span></span>`;
+    const theFirstList = theUl.querySelectorAll("li");
+    const theSecondList = secondUl.querySelectorAll("li");
+    theFirstList[
+      indexForEditingLists
+    ].textContent = `${formInputTitle.value} by ${formInputAuthor.value}`;
+    if (formInputOnPage.value === formInputMaxPages.value) {
+      theSecondList[
+        indexForEditingLists
+      ].innerText = `You have read ${formInputTitle.value} by ${formInputAuthor.value}`;
+    } else {
+      theSecondList[
+        indexForEditingLists
+      ].innerText = `You still need to read ${formInputTitle.value} by ${formInputAuthor.value}`;
+    }
 
-  const theBook = {
-    title: formInputTitle.value,
-    author: formInputAuthor.value,
-    maxPages: formInputMaxPages.value,
-    onPage: formInputOnPage.value,
-  };
-
-  formInputTitle.value = "";
-  formInputAuthor.value = "";
-  formInputMaxPages.value = "";
-  formInputOnPage.value = "";
-
-  if (
-    theBook.title === "" ||
-    theBook.author === "" ||
-    theBook.maxPages === "" ||
-    theBook.onPage === "" ||
-    theBook.maxPages < theBook.onPage
-  ) {
-    alert("You need to fill the whole form!!!");
+    formInputTitle.value = "";
+    formInputAuthor.value = "";
+    formInputMaxPages.value = "";
+    formInputOnPage.value = "";
   } else {
-    books.push(theBook);
-    populatingTable(theBook);
-    creatingList(theBook);
+    const theBook = {
+      title: formInputTitle.value,
+      author: formInputAuthor.value,
+      maxPages: formInputMaxPages.value,
+      onPage: formInputOnPage.value,
+    };
+
+    formInputTitle.value = "";
+    formInputAuthor.value = "";
+    formInputMaxPages.value = "";
+    formInputOnPage.value = "";
+
+    if (
+      theBook.title === "" ||
+      theBook.author === "" ||
+      theBook.maxPages === "" ||
+      theBook.onPage === "" ||
+      theBook.maxPages < theBook.onPage
+    ) {
+      alert("You need to fill the whole form!!!");
+    } else {
+      books.push(theBook);
+      populatingTable(theBook);
+      creatingList(theBook);
+    }
+
+    if (tableBody.hasChildNodes()) {
+      table.style.display = "table";
+    }
   }
 
-  if (tableBody.hasChildNodes()) {
-    table.style.display = "table";
-  }
+  isClicked = false;
 });
