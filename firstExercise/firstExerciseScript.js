@@ -13,9 +13,10 @@ const secondEmployee = new EmployeeData(
   1500
 );
 const thirdEmployee = new EmployeeData("Ivan", "Microsoft", "employee", 10000);
-employees.push(firstEmployee);
-employees.push(secondEmployee);
-employees.push(thirdEmployee);
+
+// let employees = [firstEmployee, secondEmployee, thirdEmployee];
+employees.push(firstEmployee, secondEmployee, thirdEmployee);
+
 
 const theUl = document.createElement("ul");
 
