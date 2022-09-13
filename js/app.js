@@ -24,7 +24,7 @@ calculateBtn.addEventListener("click", (e) => {
 });
 
 const table = document.createElement("table");
-table.classList.add("table");
+table.classList.add("table", "text-center");
 
 const tableHead = document.createElement("thead");
 const tableHeadRow = document.createElement("tr");
