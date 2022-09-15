@@ -40,6 +40,7 @@ budgetInput.addEventListener("focus", (e) => {
 });
 
 let firstTime = true;
+let multipleTimes = false;
 expenseSubmitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (expenseAmountInput.value === "") {
@@ -52,9 +53,9 @@ expenseSubmitBtn.addEventListener("click", (e) => {
     );
     const tableContainer = document.querySelector(".col-md-7.my-3");
 
-    if (firstTime) {
+    if (firstTime || multipleTimes) {
       firstTime = false;
-
+      multipleTimes = false;
       thExpenseTitle.textContent = "Expense Title";
       thExpenseAmount.textContent = "Expense Value";
       tableHeadRow.append(thExpenseTitle, thExpenseAmount);
@@ -89,7 +90,15 @@ expenseSubmitBtn.addEventListener("click", (e) => {
     };
 
     deleteBtn.addEventListener("click", (e) => {
+      console.log();
+
       deletingAndEditing(e);
+      const tBody = document.querySelector("tbody");
+      if (tBody.hasChildNodes() === false) {
+        const tHead = document.querySelector("thead");
+        tHead.remove();
+        multipleTimes = true;
+      }
     });
 
     editBtn.addEventListener("click", (e) => {
