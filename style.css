@@ -1,0 +1,91 @@
+#race {
+  text-align: center;
+  background-color: #242021;
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  color: #a2a2a2;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+/*use these below*/
+/*car1 color*/
+/*color: #ffebf7;*/
+
+/*car2 color*/
+/*color: #ba0000;*/
+
+table {
+  border-spacing: 10px 0;
+  border-collapse: separate;
+}
+#second-table {
+  display: none;
+}
+
+.car-one-table {
+  color: #ffebf7;
+}
+
+/* tbody td {
+  border: 1px solid white;
+} */
+
+.car-two-table {
+  color: #ba0000;
+}
+
+#race-track {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("./images/raceTrack.jpg");
+  background-position: center;
+  background-size: contain;
+}
+#finish-flag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#race-btn,
+#start-over {
+  border-color: white;
+  color: white;
+  padding: 5px 40px;
+}
+
+.dimmedPhoto {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+}
+
+#race-btn {
+  margin-right: 10px;
+}
+
+#car-one-img,
+#car-two-img {
+  display: block;
+  position: relative;
+}
+
+#race-track img {
+  width: 15% !important;
+}
