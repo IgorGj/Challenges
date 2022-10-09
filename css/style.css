@@ -1,0 +1,82 @@
+body {
+  background-color: #e7e7e7;
+}
+
+#filters {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h2,
+h3 {
+  font-weight: 800;
+}
+
+.ellipse {
+  background-color: #d3d3d3;
+  padding: 4px 10px;
+  border-bottom-left-radius: 25% 50%;
+  border-bottom-right-radius: 25% 50%;
+  border-top-left-radius: 25% 50%;
+  border-top-right-radius: 25% 50%;
+}
+.bg-orange {
+  background-color: #ffa500;
+}
+.c-orange {
+  color: #ffa500;
+}
+.bg-orange-hover {
+  background-color: #ffa500;
+}
+.c-orange-hover {
+  color: #ffa500;
+}
+.bolder {
+  font-weight: 800;
+}
+.card:hover {
+  border: 4px solid #ffa500;
+}
+
+a {
+  color: black;
+  font-weight: 900;
+}
+
+
+span:not(.ellipse):hover,
+a:hover,
+i:not(.fa-brands):hover,
+li:hover {
+  color: #ffa500;
+}
+.ellipse:hover {
+  background-color: #ffa500;
+}
+
+.bg-gray {
+  background-color: #f8f8f8;
+}
+
+.icons {
+  display: inline-block;
+  color: white;
+  padding: 10px 15px;
+}
+.icons:hover {
+  background-color: #d3d3d3;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul > * {
+  margin-bottom: 16px;
+}
+
+/*use color:orange for the orange color*/
+/*use background-color: #d3d3d3; color: #5c5c5c; for the badges*/
+/*use color:grey for the social-share icons on hover*/
