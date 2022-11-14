@@ -1,0 +1,19 @@
+.text-yellow {
+  color: #ffc107;
+}
+.text-yellow-hover {
+  color: #ffc107;
+}
+
+.capsule {
+  padding: 3px 12px;
+  border-radius: 15px;
+  background: #6c757d;
+  color: white;
+}
+.bg-yellow {
+  background-color: #ffc107;
+}
+.bg-yellow-hover {
+  background-color: #ffc107;
+}
