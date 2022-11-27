@@ -36,8 +36,8 @@ export const AlbumPage = ({ artists }: Props) => {
   return (
     <>
       {album &&
-        album.map((el: any) => (
-          <div className="py-5">
+        album.map((el: AlbumType, index: number) => (
+          <div className="py-5" key={index}>
             <img
               src={require(`../images/albums/${el.cover}.jpg`)}
               style={{ width: "50%" }}
